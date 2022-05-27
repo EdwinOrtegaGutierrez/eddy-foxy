@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/Main.css">
+
+    <title>Eddy Foxy</title>
+</head>
+
+<body>
+    <header class="imagen">
+        <img src="/static/img/fox.png" alt="logo">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alerta">
+                            <div class="mensaje" role="alert">
+                                <span>{{message}}</span>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+    </header>
+    <form class="caja" action="/login" method="post">
+
+        <h1>Login</h1>
+        
+        <input type="email" name="email" id="" placeholder="Ingresa tu correo electronico"  required>
+        <input type="password" name="password" id="" placeholder="Ingresa tu contraseña"  required>
+        <input type="submit" name="" value="Ingresar">
+
+        <div class="others">
+            <a  href="{{ url_for('registro') }}"> Registro </a>
+            <a  href="{{ url_for('about') }}"> About </a>
+        </div>
+    </form>
+</body>
+</html>

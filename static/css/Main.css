@@ -1,0 +1,129 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #003C71;
+}
+
+/*CAJA*/
+.caja
+{
+    width: 300px;
+    padding: 40px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #061e26;
+    text-align: center;
+}
+
+/*TITULO*/
+.caja h1
+{
+    color:azure;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.caja input[type = "email"], .caja input[type = "password"]
+{
+    border: 0;
+    background: none; /*Se elimina el fondo original del recuadro*/
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #003C71;
+    padding: 14px 10px;
+    width: 200px;
+    /*Texto interior*/
+    outline: none;
+    color: azure;
+    /*Borde*/
+    border-radius: 24px;
+    transition: 0.25s;
+}
+/*Valida la animación "transition"*/
+.caja input[type = "email"]:focus, .caja input[type = "password"]:focus
+{
+    width: 280px;
+    border-color: #2ecc71;
+}
+
+/*BOTON INGRESAR*/
+.caja input[type="submit"]
+{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 40px;
+    outline: none;
+    color: azure;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.others a{
+    text-decoration: none;
+    color: azure;
+    margin-top: 35%;
+    margin: 20px;
+    left: 5px;
+    text-transform: uppercase;
+}
+img {
+    max-width: 50%;
+    max-height: 50%;
+    margin: 20px;
+}
+.imagen{
+    height: 200px;
+    width: 200px;
+}
+/*ABOUT*/
+p{
+    color:azure;
+    font-size: 15px;
+}
+.home a{
+    text-decoration: none;
+    color: rgb(112, 112, 112);
+    margin-top: 35%;
+    margin: 20px;
+    left: 5px;
+    text-transform: uppercase;
+}
+/*REGISTRO*/
+.homeRegistro a{
+    text-decoration: none;
+    color: rgb(112, 112, 112);
+    margin-top: 35%;
+    margin: 20px;
+    left: 5px;
+    text-transform: uppercase;
+}
+
+/*ALERTA*/
+.alerta{
+    position: absolute;
+    left: 20px;
+    height: 60px;
+    width: 200px;
+    border-radius: 30px;
+    text-align: center;
+    color:azure;
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: rgb(211, 77, 0);
+}
+
+.mensaje{
+    position: relative;
+    top: 20px;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/Main.css">
+    <title>Registro</title>
+</head>
+<body>
+    <header class="imagen">
+        <img src="/static/img/fox.png" alt="logo">
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alerta">
+                            <div class="mensaje" role="alert">
+                                <span>{{message}}</span>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+    </header>
+    <form class="caja" id="registro" action="/registro" method="post">
+        <h1>Registrar usuario</h1>
+        <input type="email" name="email" id="correo" placeholder="Ingresa tu correo electronico"  required>
+        <input type="password" name="password" id="contraseña" placeholder="Ingresa tu contraseña"  required>
+        <input type="password" name="confirmar_password" id="confirmar" placeholder="Confirma tu contraseña"  required>
+        <input type="submit" name="" value="Registrar">
+        <div class="homeRegistro">
+            <a href="/">Volver al inicio</a>
+        </div>
+    </form>
+</body>
+</html>
